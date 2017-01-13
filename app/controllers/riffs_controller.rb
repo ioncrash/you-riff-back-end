@@ -1,5 +1,5 @@
 class RiffsController < OpenReadController
-  before_action :set_riff, only: [:show, :update, :destroy]
+  before_action :set_riff, only: [:update, :destroy]
 
   # GET /riffs
   # GET /riffs.json
@@ -12,16 +12,16 @@ class RiffsController < OpenReadController
   # GET /riffs/1
   # GET /riffs/1.json
   def show
-    render json: @riff
+    render json: Riff.find(params[:id])
   end
 
   # POST /riffs
   # POST /riffs.json
   def create
-    @riff = Riff.new(riff_params)
+    @riff = current_user.riffs.build(riff_params)
 
     if @riff.save
-      render json: @riff, status: :created, location: @riff
+      render json: @riff, status: :created
     else
       render json: @riff.errors, status: :unprocessable_entity
     end
@@ -30,8 +30,6 @@ class RiffsController < OpenReadController
   # PATCH/PUT /riffs/1
   # PATCH/PUT /riffs/1.json
   def update
-    @riff = Riff.find(params[:id])
-
     if @riff.update(riff_params)
       head :no_content
     else
@@ -47,13 +45,13 @@ class RiffsController < OpenReadController
     head :no_content
   end
 
-  private
+  def set_riff
+    @riff = current_user.riffs.find(params[:id])
+  end
 
-    def set_riff
-      @riff = Riff.find(params[:id])
-    end
+  def riff_params
+    params.require(:riff).permit(:text, :user_id, :ytid, :stamp, :flagged)
+  end
 
-    def riff_params
-      params.require(:riff).permit(:user_id, :ytid, :text, :stamp, :flagged)
-    end
+  private :set_riff, :riff_params
 end

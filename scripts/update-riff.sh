@@ -1,14 +1,13 @@
-TOKEN="BAhJIiUzYzI1NTliM2EzZjE3NjJiY2I3OTc5OTg5MTNjZDk1OQY6BkVG--8b13fd5ddb5ca57c7bc8e746422374d249637bf1"
-ID="1"
-TOKEN="BAhJIiUzYzI1NTliM2EzZjE3NjJiY2I3OTc5OTg5MTNjZDk1OQY6BkVG--8b13fd5ddb5ca57c7bc8e746422374d249637bf1"
-USER_ID="1"
+ID="4"
+TOKEN="BAhJIiUyYjljNDhjMTljNGIwN2M5NmZjMWZlMWUzZWIwMDE1YQY6BkVG--3bea207d9fc9497c5c5de941a7656ff1e0c4fbee"
+USER_ID="3"
 YTID="g3a4jA0jfrk"
-TEXT="This is another riff"
+TEXT="tee hee"
 STAMP="3"
 FLAGGED="false"
 
 API="http://localhost:4741"
-URL_PATH="/change-password"
+URL_PATH="/riffs"
 curl "${API}${URL_PATH}/${ID}" \
   --include \
   --request PATCH \
