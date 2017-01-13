@@ -1,11 +1,11 @@
-TOKEN="BAhJIiUyYjljNDhjMTljNGIwN2M5NmZjMWZlMWUzZWIwMDE1YQY6BkVG--3bea207d9fc9497c5c5de941a7656ff1e0c4fbee"
-USER_ID="2"
+TOKEN="BAhJIiU0ZDEyNDczOWNmNjU5NDk1YTIzYmY2N2MyMTFlZDc4MAY6BkVG--c475de7c8d5aa59b5da9741c4bf65a324b568659"
+USER_ID="1"
 YTID="g3a4jA0jfrk"
 TEXT="This is rif 1000"
 STAMP="3"
 FLAGGED="false"
 
-API="http://localhost:4741"
+API="https://quiet-lowlands-87275.herokuapp.com"
 URL_PATH="/riffs"
 curl "${API}${URL_PATH}" \
   --include \

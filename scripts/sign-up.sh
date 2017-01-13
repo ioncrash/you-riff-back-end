@@ -1,7 +1,7 @@
 EMAIL="herp@derp.com"
 PASSWORD="herp"
 
-API="http://localhost:4741"
+API="https://quiet-lowlands-87275.herokuapp.com"
 URL_PATH="/sign-up"
 curl "${API}${URL_PATH}" \
   --include \
