@@ -1,4 +1,4 @@
-class RiffsController < ApplicationController
+class RiffsController < OpenReadController
   before_action :set_riff, only: [:show, :update, :destroy]
 
   # GET /riffs
