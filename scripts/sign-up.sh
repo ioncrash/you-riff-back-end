@@ -1,6 +1,9 @@
 EMAIL="herp@derp.com"
 PASSWORD="herp"
 
+EMAILA="beep@thing.com"
+PASSWORDA="beep"
+
 API="http://localhost:4741"
 URL_PATH="/sign-up"
 curl "${API}${URL_PATH}" \
@@ -9,9 +12,9 @@ curl "${API}${URL_PATH}" \
   --header "Content-Type: application/json" \
   --data '{
     "credentials": {
-      "email": "'"${EMAIL}"'",
-      "password": "'"${PASSWORD}"'",
-      "password_confirmation": "'"${PASSWORD}"'"
+      "email": "'"${EMAILA}"'",
+      "password": "'"${PASSWORDA}"'",
+      "password_confirmation": "'"${PASSWORDA}"'"
     }
   }'
 
