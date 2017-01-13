@@ -1,5 +1,5 @@
 class RiffSerializer < ActiveModel::Serializer
-  attributes :id, :ytid, :text, :stamp, :flagged, :editable
+  attributes :id, :text, :stamp, :flagged, :editable
   has_one :user
 
   def editable

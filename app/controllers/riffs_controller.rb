@@ -50,7 +50,7 @@ class RiffsController < OpenReadController
   end
 
   def riff_params
-    params.require(:riff).permit(:text, :user_id, :ytid, :stamp, :flagged)
+    params.require(:riff).permit(:text, :user_id, :stamp, :flagged)
   end
 
   private :set_riff, :riff_params
