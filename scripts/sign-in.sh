@@ -6,7 +6,7 @@ PASSWORD="herp"
 EMAILA="beep@thing.com"
 PASSWORDA="beep"
 
-API="http://localhost:4741"
+API="https://quiet-lowlands-87275.herokuapp.com"
 URL_PATH="/sign-in"
 curl "${API}${URL_PATH}" \
   --include \
@@ -14,9 +14,9 @@ curl "${API}${URL_PATH}" \
   --header "Content-Type: application/json" \
   --data '{
     "credentials": {
-      "email": "'"${EMAILA}"'",
-      "password": "'"${PASSWORDA}"'",
-      "password_confirmation": "'"${PASSWORDA}"'"
+      "email": "'"${EMAIL}"'",
+      "password": "'"${PASSWORD}"'",
+      "password_confirmation": "'"${PASSWORD}"'"
     }
   }'
 
